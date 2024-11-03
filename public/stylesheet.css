@@ -1,0 +1,242 @@
+/* Global font style */
+body {
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 1000;
+}
+
+/* Light theme styles */
+.light-theme {
+  background: linear-gradient(to right, #f5f5f5, #e0e0e0);
+  color: #1A1A1A;
+}
+
+.light-theme #app-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+}
+
+/* Dark theme styles */
+.dark-theme {
+  background: linear-gradient(to right, #2e2e2e, #1c1c1c);
+  color: #e0e0e0;
+}
+
+.dark-theme #app-container {
+  background-color: rgba(51, 51, 51, 0.6);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+/* Message styling */
+.message {
+  padding: 20px;
+  border-radius: 12px;
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #3f51b5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light theme message colors */
+.light-theme .message.user {
+  background-color: rgba(255, 193, 204, 0.5);
+  backdrop-filter: blur(8px);
+  color: #333333;
+  border: 1px solid rgba(255, 138, 128, 0.3);
+}
+
+.light-theme .message.assistant {
+  background-color: rgba(187, 222, 251, 0.5);
+  backdrop-filter: blur(8px);
+  color: #003c8f;
+  border: 1px solid rgba(144, 202, 249, 0.3);
+}
+
+/* Dark theme message colors */
+.dark-theme .message.user {
+  background-color: rgba(140, 83, 97, 0.5);
+  backdrop-filter: blur(8px);
+  color: #e0e0e0;
+  border: 1px solid rgba(181, 101, 118, 0.3);
+}
+
+.dark-theme .message.assistant {
+  background-color: rgba(85, 122, 149, 0.5);
+  backdrop-filter: blur(8px);
+  color: #d0e0e3;
+  border: 1px solid rgba(143, 170, 193, 0.3);
+}
+
+/* Customize button colors for themes */
+button {
+  background-color: rgba(63, 81, 181, 0.8);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+button:hover {
+  background-color: rgba(48, 63, 159, 0.8);
+}
+
+button:active {
+  background-color: rgba(40, 53, 147, 0.8);
+}
+
+/* Dark theme button */
+.dark-theme button {
+  background-color: rgba(92, 107, 192, 0.8);
+}
+
+.dark-theme button:hover {
+  background-color: rgba(61, 78, 150, 0.8);
+}
+
+/* Chat history scrollbar */
+.chat-history {
+  max-height: 500px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  backdrop-filter: blur(5px);
+}
+
+.light-theme .chat-history {
+  scrollbar-color: #D81B60 #F5F5F5;
+}
+
+.dark-theme .chat-history {
+  scrollbar-color: #8faac1 #333333;
+}
+
+.chat-history::-webkit-scrollbar {
+  width: 10px;
+}
+
+.chat-history::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.light-theme .chat-history::-webkit-scrollbar-thumb {
+  background-color: #3f51b5;
+}
+
+.dark-theme .chat-history::-webkit-scrollbar-thumb {
+  background-color: #8faac1;
+}
+
+/* Input fields styling */
+input[type="text"], textarea {
+  border: 1px solid #C5CAE9;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  transition: all 0.2s;
+}
+
+input[type="text"]:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0px 4px 8px rgba(63, 81, 181, 0.2);
+}
+
+.light-theme input[type="text"], .light-theme textarea {
+  color: #333333;
+}
+
+.dark-theme input[type="text"], .dark-theme textarea {
+  background-color: rgba(46, 46, 46, 0.5);
+  color: #e0e0e0;
+  border-color: #8faac1;
+}
+
+/* Avatar customization */
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-right: 10px;
+  border: 2px solid #3f51b5;
+  transition: border-color 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.dark-theme .avatar {
+  border-color: #8faac1;
+}
+
+/* Headings and link styles */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.light-theme h1, .light-theme h2, .light-theme h3, .light-theme h4 {
+  color: #D81B60;
+}
+
+.dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme h4 {
+  color: #ff8a80;
+}
+
+a {
+  transition: color 0.3s;
+}
+
+.light-theme a {
+  color: #1E88E5;
+}
+
+.light-theme a:hover {
+  color: #1565C0;
+}
+
+.dark-theme a {
+  color: #90CAF9;
+}
+
+.dark-theme a:hover {
+  color: #64B5F6;
+}
+
+/* Header and footer styles */
+header, footer {
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.light-theme header, .light-theme footer {
+  background-color: rgba(63, 81, 181, 0.8);
+  color: #FFFFFF;
+}
+
+.dark-theme header, .dark-theme footer {
+  background-color: rgba(66, 66, 66, 0.8);
+  color: #FFFFFF;
+}
+
+/* Hide the Chainlit footer */
+footer, a[href*='https://github.com/Chainlit/chainlit'] {
+  display: none !important;
+}
