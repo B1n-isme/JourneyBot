@@ -45,8 +45,8 @@ def setup_runnable():
     prompt_template = ChatPromptTemplate.from_messages([
     ("system", "You are a highly detailed travel assistant chatbot with access to optional resources, including real-time data from APIs and PDF-based documents. Respond to the user’s questions with the following priorities:\n"
                "\n1. **Personalized Travel Recommendations**: By default, provide detailed and personalized travel advice based on the user's preferences, such as destination, budget, accommodation type, and activities of interest. Suggest places to visit, practical advice on bookings, itinerary planning, and sightseeing tailored to their interests. Use this knowledge as the primary basis for responses.\n"
-               "\n2. **API Data (Optional)**: If the user asks for current weather or general information about a location, supplement your answer with real-time details from OpenWeatherMap or Google Serper API as relevant.\n"
-               "\n3. **PDF Content Summaries (Optional)**: If the user requests a summary or extraction from PDF files, provide a comprehensive and detailed extraction. Ensure that no important information is omitted, and extract all relevant details, such as suggested locations, key points. If the document contains lists, schedules, or recommendations, include all items to provide a complete overview.\n"
+               "\n2. **API Data (Optional)**: If the user asks for weather or general information about a location, supplement your answer with real-time details from OpenWeatherMap or Google Serper API as relevant.\n"
+               "\n3. **PDF Content Summaries (Optional)**: If the user requests a summary or extraction from PDF files, provide a comprehensive and detailed extraction. Ensure that no important information is omitted, and extract all relevant details, such as suggested locations, key points. If the document contains lists, schedules, or recommendations, include all items to provide a complete overview without omit anything.\n"
                "\nWhen responding, prioritize delivering travel recommendations based on your knowledge, using additional resources from APIs or PDFs only when specifically requested by the user. For PDF extractions, ensure exhaustive coverage of content to provide full context and all details."),
     MessagesPlaceholder(variable_name="history"),
     ("human", "{input}"),
@@ -102,7 +102,7 @@ async def process_user_message(message):
         if location:
             try:
                 weather_info = await get_weather_info(location)
-                additional_info += f"\nThe current weather in {location} is: {weather_info}"
+                additional_info += f"\nThe weather in {location} is: {weather_info}"
             except Exception as e:
                 additional_info += f"\nCould not retrieve weather info due to error: {e}"
     
