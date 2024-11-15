@@ -83,7 +83,7 @@ pip install -r requirements.txt
 ```
 
 3. Setup Environment Variables:
-Rename `example.env` to `.env` and add your respective API keys:
+Name it as `.env` and add your respective API keys:
 
 ```plaintext
 OPENCAGE_API_KEY=<Your_OpenCage_API_Key>
