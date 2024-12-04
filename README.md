@@ -152,5 +152,10 @@ The [stylesheets.css](./public/stylesheet.css) and [custom.js](./public/custom.j
 - **PDF Not Embedding Properly**: Verify that the PDF file is new (not listed in [processed_files.json](./processed_files.json)). Re-run [vectorize_pdf.py](./vectorize_pdf.py) if needed.
 - **API Errors**: Ensure that API keys in .`env` are correct and active.
 
+## Useful Links
+- [Pinecone](https://app.pinecone.io/organizations/-OAcXDD4Xak3_A5004R7/projects/89d48f5f-7a03-4146-ac92-782f81d93032/indexes/journeybot/metrics)
+- [Langchain](https://smith.langchain.com/o/2f5b3605-7749-4526-8b93-810a845c4658/projects/p/9dda469c-edc3-4a0a-8e84-cfa0221f647c?timeModel=%7B%22duration%22%3A%227d%22%7D)
+- [LiteralAI](https://cloud.getliteral.ai/projects/chatbot-7GyNTro43I5V/dashboard)
+
 
 This [README.md](./README.md) provides a comprehensive guide to the JourneyBot project, including setup, usage, and customization instructions. Let me know if there are additional details you'd like to include!
